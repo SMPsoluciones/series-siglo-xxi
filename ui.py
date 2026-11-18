@@ -20,12 +20,12 @@ ICONO_ESTADO = {"vista": "✅", "viendo": "▶️", "pendiente": "⏳", "abandon
 # ------------------------------------------------------------------ datos
 
 @st.cache_data(ttl=600, show_spinner=False)
-def _todas():
+def _todas(origen):
     return db.todas()
 
 
 def cargar():
-    df = _todas().copy()
+    df = _todas("supabase" if db.refrescar_config() else "local").copy()
     df["decada"] = (df["anio_inicio"] // 10 * 10).astype("Int64").astype(str).str.replace("<NA>", "—") + "s"
     df["score_critica"] = df[["imdb"]].assign(rt10=df["rt"] / 10).mean(axis=1, skipna=True)
     return df

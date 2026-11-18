@@ -94,8 +94,18 @@ def ahora():
     return datetime.now().isoformat(timespec="seconds")
 
 
+def refrescar_config():
+    """Vuelve a leer la conexión (en la nube los Secrets pueden llegar después de importar el módulo)."""
+    global DB_URL, PG
+    if not PG:
+        DB_URL = _db_url()
+        PG = bool(DB_URL)
+    return PG
+
+
 def conectar():
     """Conexión cruda (SQLite o Postgres). Para scripts; en la app se usa _con()."""
+    refrescar_config()
     if PG:
         import psycopg
         from psycopg.rows import dict_row

@@ -18,7 +18,7 @@ ui.estilos()
 st.logo("logo.svg", size="large")
 
 _EN_NUBE = __import__("pathlib").Path("/mount/src").exists()
-if not db.PG and (_EN_NUBE or not db.DB_PATH.exists()):
+if not db.refrescar_config() and (_EN_NUBE or not db.DB_PATH.exists()):
     try:
         _claves = sorted(st.secrets.keys())
     except Exception:
