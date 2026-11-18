@@ -17,8 +17,14 @@ from ui import NARANJA, anios_txt, cargar, grilla, poster, temps_txt  # noqa: E4
 ui.estilos()
 st.logo("logo.svg", size="large")
 
-if not db.PG and not db.DB_PATH.exists():
-    st.error("Falta configurar la base de datos: agrega `db_url` en los Secrets de la app.")
+_EN_NUBE = __import__("pathlib").Path("/mount/src").exists()
+if not db.PG and (_EN_NUBE or not db.DB_PATH.exists()):
+    try:
+        _claves = sorted(st.secrets.keys())
+    except Exception:
+        _claves = []
+    st.error("La app no encuentra la base de datos (falta `db_url` en Secrets). "
+             f"Claves que sí ve: {', '.join(_claves) or 'ninguna'}.")
     st.stop()
 
 # Unánimes: el Peri, IMDb y Rotten Tomatoes coinciden en que hay que verla
