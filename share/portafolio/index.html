@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vista previa · ficha Series XXI</title><meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#03112C;--bg:#03112C;--ink:#F2F6FF;--muted:#A9BBDD;--line:rgba(77,166,255,.18);--on-dark:#C9D6EE;--on-dark2:#9FB3D6;--blue2:#4DA6FF;--surface:rgba(16,44,98,.42);
+--f-display:"Sora","Segoe UI",system-ui,sans-serif;--f-body:"Figtree","Segoe UI",system-ui,sans-serif;--f-data:"IBM Plex Mono",ui-monospace,Consolas,monospace;--s3:12px;--s4:16px;--s6:32px;--r:16px;--r-lg:22px;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+body{background:radial-gradient(900px 500px at 80% -100px,rgba(0,123,253,.22),transparent 70%),var(--bg);color:var(--ink);font-family:var(--f-body);padding:48px 16px 64px}
+main{max-width:1120px;margin:0 auto}
+h2{font:700 clamp(1.8rem,4vw,2.4rem)/1.15 var(--f-display);margin:.4rem 0 .6rem}
+h3{font-family:var(--f-display)}
+.eb{font:600 .78rem var(--f-data);letter-spacing:.12em;text-transform:uppercase;color:var(--blue2)}
+.intro{color:var(--muted);margin-bottom:32px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;box-shadow:0 1px 2px rgba(0,0,0,.2),0 12px 32px rgba(0,0,0,.28)}
+.case .tag{font-family:var(--f-data);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--on-dark2)}
+.grupo{font-size:.86rem;font-family:var(--f-data);text-transform:uppercase;letter-spacing:.12em;color:var(--on-dark2);font-weight:600;margin:0 0 var(--s4)}
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:var(--s4)}
+.case{display:grid;gap:var(--s3);align-content:start}
+.case h3{font-size:1.25rem}
+.marco{border-radius:var(--r);border:1px solid rgba(77,166,255,.3);background:rgb(5,24,56);overflow:hidden;box-shadow:rgba(0,0,0,.4) 0 14px 40px}
+.marco.fotos{display:grid;gap:6px;padding:0;background:rgb(5,24,56)}
+.marco.fotos>img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;background:rgb(5,24,56)}
+.case-cli{color:var(--muted);font-size:.9rem;margin-top:-6px}
+.case-demo{justify-self:start;font-weight:700;color:var(--blue2);min-height:44px;display:inline-flex;align-items:center}
+.ad{display:grid;gap:8px}.ad>div{padding:12px 14px;border-radius:12px;display:grid;gap:2px}
+.ad span,.res span{display:block;font:600 .7rem var(--f-data);letter-spacing:.1em;text-transform:uppercase}
+.ad p{font-size:.95rem}
+.antes{background:rgba(255,255,255,.03);border:1px dashed rgba(159,179,214,.3);color:rgb(159,176,207)}.antes span{color:rgb(143,162,198)}
+.despues{background:rgba(0,123,253,.14);border:1px solid rgba(77,166,255,.5);color:rgb(242,246,255);box-shadow:rgba(0,123,253,.18) 0 0 24px}.despues span{color:var(--blue2)}
+.res{display:flex;flex-wrap:wrap;align-items:center;gap:6px var(--s4);padding:12px 14px;border-radius:12px;background:rgba(95,224,176,.08);border:1px solid rgba(95,224,176,.35)}
+.res span{color:rgb(95,224,176)}.res p{font-weight:700;font-size:.95rem;flex:1 1 14rem;min-width:0}
+.cifra{font:600 clamp(1.5rem,7vw,2.2rem)/1.1 var(--f-data);color:rgb(95,224,176);white-space:nowrap}
+</style></head><body><main>
+<div class="eb">Portafolio · vista previa</div><h2>Ficha de Series XXI</h2>
+<p class="intro">Así se vería en la sección de portafolio de SMP, con los mismos estilos de las demás fichas.</p>
+<p class="grupo">Productos propios</p>
+<div class="cases">
+<article class="card case" data-caso="series">
+  <div class="marco fotos">
+    <img src="https://series-xxi.vercel.app/portafolio/series-xxi.jpg" alt="Series XXI · ranking Infaltables con la nota del Peri, IMDb y Rotten Tomatoes" loading="lazy" width="1600" height="1000">
+  </div>
+  <span class="tag">Web · José Alberto</span>
+  <h3>Series XXI</h3>
+  <p class="case-cli">Plataforma de recomendación de series</p>
+  <div class="ad">
+    <div class="antes"><span>Antes</span><p>Un Excel con más de 400 series, notas puestas a mano y los puntajes de IMDb y Rotten Tomatoes copiados uno por uno. Siempre desactualizado.</p></div>
+    <div class="despues"><span>Lo que hicimos</span><p>Una app web que busca sola los puntajes, las temporadas y los años de cada serie y los mantiene al día. Con ranking propio, filtros por década y un dado para elegir qué ver.</p></div>
+  </div>
+  <div class="res"><b class="cifra">430 series</b><p><span>Resultado</span>Se comparte con un link por WhatsApp y se actualiza sola. Hecha con Claude.</p></div>
+  <a class="case-demo" href="https://series-xxi.vercel.app" target="_blank" rel="noopener">Ver la demostración</a>
+</article>
+
+</div></main></body></html>
