@@ -1,0 +1,8 @@
+# Claves y datos privados: nunca al repositorio
+.streamlit/secrets.toml
+series.db
+*.xlsx
+Posted/
+_archivo/
+__pycache__/
+.claude/
