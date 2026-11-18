@@ -20,7 +20,9 @@ def _db_url():
         return url
     try:
         import streamlit as st
-        return st.secrets.get("db_url")
+        url = st.secrets.get("db_url")
+        if url:
+            return url
     except Exception:
         pass
     try:

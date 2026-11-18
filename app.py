@@ -17,6 +17,10 @@ from ui import NARANJA, anios_txt, cargar, grilla, poster, temps_txt  # noqa: E4
 ui.estilos()
 st.logo("logo.svg", size="large")
 
+if not db.PG and not db.DB_PATH.exists():
+    st.error("Falta configurar la base de datos: agrega `db_url` en los Secrets de la app.")
+    st.stop()
+
 # Unánimes: el Peri, IMDb y Rotten Tomatoes coinciden en que hay que verla
 UNAN_PERI, UNAN_IMDB, UNAN_RT = 9.0, 8.0, 80
 
@@ -110,7 +114,8 @@ def inicio():
                      help="Una serie al azar entre las que el Peri calificó con 9 o más"):
             buenas = vistas[vistas["peri_rate"] >= 9]["id"].tolist()
             previa = st.session_state.get("dado")
-            st.session_state["dado"] = int(random.choice([i for i in buenas if i != previa] or buenas))
+            if buenas:
+                st.session_state["dado"] = int(random.choice([i for i in buenas if i != previa] or buenas))
     if "dado" in st.session_state:
         s = db.obtener(st.session_state["dado"])
         if s:
