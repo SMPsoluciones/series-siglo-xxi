@@ -36,3 +36,7 @@ python sincronizar.py
 
 Opciones: `--limite 100` (solo las 100 con más tiempo sin actualizar) y `--solo-vincular`.
 El plan gratis de OMDb permite ~1000 consultas por día.
+
+## Link para compartir
+
+`share/` es la página de entrada que se comparte por WhatsApp (https://series-xxi.vercel.app): tiene la vista previa (`preview.jpg`) y manda a la app. Se publica en Vercel desde esa carpeta con `vercel deploy --prod`.

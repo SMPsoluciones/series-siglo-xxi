@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Series XXI · Las mejores series del siglo XXI</title>
+<meta name="description" content="430 series evaluadas por IMDb, Rotten Tomatoes y el Peri. Infaltables, unánimes y un dado para elegir qué ver.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Series XXI">
+<meta property="og:title" content="Series XXI · Las mejores series del siglo XXI">
+<meta property="og:description" content="430 series evaluadas por IMDb, Rotten Tomatoes y el Peri. Infaltables, unánimes y un dado para elegir qué ver.">
+<meta property="og:url" content="https://series-xxi.vercel.app/">
+<meta property="og:image" content="https://series-xxi.vercel.app/preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Series XXI: las mejores series del siglo XXI">
+<meta property="og:locale" content="es_LA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Series XXI · Las mejores series del siglo XXI">
+<meta name="twitter:description" content="430 series evaluadas por IMDb, Rotten Tomatoes y el Peri.">
+<meta name="twitter:image" content="https://series-xxi.vercel.app/preview.jpg">
+<meta name="theme-color" content="#0b0a09">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230b0a09'/><text x='32' y='43' font-family='Georgia,serif' font-style='italic' font-size='30' text-anchor='middle' fill='%23ff8c00'>XXI</text></svg>">
+<style>
+  :root{--bg:#0b0a09;--text:#f4efe8;--soft:#cfc7bc;--accent:#ff8c00;--accent2:#ffb357}
+  *{box-sizing:border-box;margin:0}
+  html,body{height:100%}
+  body{background:radial-gradient(900px 420px at 50% -120px,rgba(255,140,0,.14),transparent 65%),var(--bg);color:var(--text);
+    font-family:-apple-system,"Segoe UI",Roboto,Inter,sans-serif;display:grid;place-items:center;padding:24px;text-align:center}
+  .eb{font-size:.72rem;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--accent2)}
+  h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(3rem,12vw,5.5rem);line-height:1;margin:.8rem 0 1rem;letter-spacing:-.03em}
+  h1 em{color:var(--accent)}
+  p{color:var(--soft);max-width:28rem;margin:0 auto 1.8rem;line-height:1.5}
+  a.btn{display:inline-block;padding:.85rem 1.8rem;border-radius:999px;background:linear-gradient(180deg,#ffa234,#ff7f00);
+    color:#1a0f00;font-weight:650;text-decoration:none;box-shadow:0 10px 30px -10px rgba(255,140,0,.7)}
+  small{display:block;margin-top:1.2rem;color:#8f877d;font-size:.8rem}
+</style>
+</head>
+<body>
+<main>
+  <div class="eb">Las mejores series del siglo XXI</div>
+  <h1>Series <em>XXI</em></h1>
+  <p>430 series evaluadas por IMDb, Rotten Tomatoes y el Peri.</p>
+  <a class="btn" href="https://21tvseries.streamlit.app/">Entrar</a>
+  <small id="msg">Abriendo la colección…</small>
+</main>
+<script>
+  // Las personas entran directo a la app; WhatsApp y las redes solo leen la vista previa de arriba.
+  setTimeout(function(){ location.replace("https://21tvseries.streamlit.app/" + location.search); }, 600);
+</script>
+</body>
+</html>
